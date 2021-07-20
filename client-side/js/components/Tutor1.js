@@ -1,6 +1,6 @@
-export default function Tutor1() {
+export default function Tutor2() {
     return `
-    <h1>What You'll Learn is Out of This World!</h1>
-<img class="page-image" src="assets/astronaut.jpg" alt="astronaut">
+    <h1>Hey Kids It's Me, Spidy!...or is it?</h1>
+<img class="page-image" src="assets/spidy.jpg" alt="spiderman">
     `;
 }
