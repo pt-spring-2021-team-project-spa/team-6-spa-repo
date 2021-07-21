@@ -12,7 +12,8 @@ public class Subject {
     private Long id;
     private String info;
     private String type;
-    @ManyToOne
+    @OneToMany(mappedBy = "subject")
+    @JsonIgnore
     private Collection<InterestingInfo> interestingInfos;
     @ManyToMany
     @JsonIgnore
@@ -42,12 +43,11 @@ public class Subject {
     public Subject() {
     }
 
-    public Subject(Long id, String info, String type, InterestingInfo... interestingInfos) {
-        this.id = id;
+    public Subject( String info, String type, InterestingInfo... interestingInfos) {
         this.info = info;
         this.type = type;
         this.interestingInfos = new ArrayList<>(Arrays.asList(interestingInfos));
-        this.hashTags = new HashSet<>();
+
 
     }
 
