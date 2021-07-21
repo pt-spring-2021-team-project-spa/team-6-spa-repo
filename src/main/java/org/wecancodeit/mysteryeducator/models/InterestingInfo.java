@@ -15,6 +15,7 @@ public class InterestingInfo {
     @OneToMany(mappedBy = "interestingInfos")
     private Subject subject;
 
+
     public Long getId() {
         return id;
     }
