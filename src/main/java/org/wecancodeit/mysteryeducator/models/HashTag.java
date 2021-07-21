@@ -5,6 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.Objects;
 
@@ -15,7 +16,7 @@ public class HashTag {
     private Long id;
     private String name;
     @ManyToMany(mappedBy = "hashTags")
-    private Collection<Planet> planets;
+    private Collection<Subject> subjects;
 
     public HashTag() {
 
@@ -29,14 +30,13 @@ public class HashTag {
         return name;
     }
 
-    public Collection<Planet> getPlanets() {
-        return planets;
+    public Collection<Subject> getSubjects() {
+        return subjects;
     }
 
-    public HashTag(Long id, String name) {
-        this.id = id;
+    public HashTag( String name,Subject...subjects) {
         this.name = name;
-        planets = new ArrayList<>();
+       this.subjects = new ArrayList<Subject>(Arrays.asList(subjects));
 
     }
 

@@ -1,6 +1,7 @@
 package org.wecancodeit.mysteryeducator.models;
 
 import javax.persistence.*;
+import java.util.Collection;
 import java.util.Objects;
 
 @Entity
@@ -12,8 +13,10 @@ public class InterestingInfo {
     private String distance;
     private String size;
     private String weight;
-    @OneToMany(mappedBy = "interestingInfos")
+    @ManyToOne
     private Subject subject;
+    @ManyToOne
+    private Planet planet;
 
     public Long getId() {
         return id;
@@ -35,19 +38,24 @@ public class InterestingInfo {
         return weight;
     }
 
-    public Subject getData() {
+    public Subject getSubject() {
         return subject;
     }
+
+    public Planet getPlanet() {
+        return planet;
+    }
+
     public InterestingInfo(){
 
     }
 
-    public InterestingInfo(Long id, String age, String distance, String size, String weight) {
-        this.id = id;
+    public InterestingInfo( String age, String distance, String size, String weight) {
         this.age = age;
         this.distance = distance;
         this.size = size;
         this.weight = weight;
+
     }
 
     @Override
