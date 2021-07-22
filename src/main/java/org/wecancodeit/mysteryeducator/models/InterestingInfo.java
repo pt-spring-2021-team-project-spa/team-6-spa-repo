@@ -18,6 +18,7 @@ public class InterestingInfo {
     @ManyToOne
     private Planet planet;
 
+
     public Long getId() {
         return id;
     }
