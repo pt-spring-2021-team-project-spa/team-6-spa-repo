@@ -14,28 +14,43 @@ h4 {
 }
 
 #app {
-    background-color: rgb(211, 13, 13);
+    background-color: yellow;
     border-radius: 8px;
+
 }
 
 .page-image {
-    height: 50%;
-    width: 75%;
+    height: 40%;
+    width: 40%;
 }
 
 .nav-list li {
-    background-color: blue;
-    border-radius: 10px;
+    background-color: red;
+    border-radius: 6px;
     color: #fff;
     list-style-type: none;
-    padding: 1rem;
+    padding: .7rem;
+    box-shadow: 10px 5px 5px black;
 }
 
 .nav-list li:hover {
-    background-color: lightblue;
-    color: #888;
+    background-color: green;
     transition: 0.5s;
+
 }
+
+body {
+    background-color: cyan;
+}
+
+/* .container {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-template-rows: 1;
+    grid-column-gap: 2em;
+
+
+} */
 
 /* .hashTags-list {
     margin: 1rem;
@@ -52,3 +67,21 @@ h4 {
     transition: 0.5s;
     width: 50%;
 } */
+@keyframes animatedBackground {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 100% 0;
+    }
+}
+
+#animate-area {
+    width: 800px;
+    height: 200px;
+    background-image: url(http://placekitten.com/400/200);
+    background-position: 0px 0px;
+    background-repeat: repeat-x;
+    animation: animatedBackground 10s linear infinite alternate;
+}

@@ -1,7 +1,11 @@
-// import handsImg from '../../assets/colorful kids painted hands.jpg';
+import bigdreamsImg from '../../images/bigdreams.jpg';
+
 export default function Home() {
+
     return `
-    <h1>Explore Your World and Beyond!</h1>
-    <img class="page-image" src="assets/colorful kids painted hands.jpg" alt="painted hands">
+    <div class='homePage__container'>
+    <h1>Hey Kids! Let's Have Fun with Jackr!!</h1>
+            <img class="page-image" src="${bigdreamsImg}" alt="big dreams banner">
+</div>
    `;
 }
