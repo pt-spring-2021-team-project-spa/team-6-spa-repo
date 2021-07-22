@@ -6,6 +6,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.Objects;
 
@@ -16,9 +18,9 @@ public class Planet {
     private Long id;
     private String name;
     private String location;
-    @OneToMany(mappedBy = "subject")
+    @OneToMany(mappedBy = "planet")
     @JsonIgnore
-    private Collection<Planet> planets;
+    private Collection<InterestingInfo>interestingInfos;
 
     public Long getId() {
         return id;
@@ -32,19 +34,18 @@ public class Planet {
         return location;
     }
 
-    public Collection<Planet> getPlanets() {
-        return planets;
+    public Collection<InterestingInfo> getInterestingInfos() {
+        return interestingInfos;
     }
-
 
     public Planet() {
 
     }
 
-    public Planet(Long id, String name, String location) {
-        this.id = id;
+    public Planet( String name, String location,InterestingInfo...interestingInfos) {
         this.name = name;
         this.location = location;
+        this.interestingInfos = new ArrayList<>(Arrays.asList(interestingInfos));
     }
 
     @Override
