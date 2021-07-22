@@ -1,32 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" http-equiv="Content-Type" content="text/html">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/style2.css">
-</head>
-
-<body>
-<div class="head">
-    <nav>
-        
-
-            <li><a th:href="@{about}"> About us </a></li>
-            <li><a th:href="@{contact}"> Contact us </a></li>
-
-        </ul>
-
-
-    </nav>
-    <div class="top1">
-        <p>About Us</p>
-
-        <a th:href="@{wecantrekit}" > HOME</a>
-    </div>
-</div>
-<header>
-
-</header>
+export  default  function AboutUs() {
+return ` <h1>About Us</h1>
 <div class="about-section">
     <h1> Meet the creators</h1>
     <div class="row">
@@ -97,9 +70,9 @@
                     </p>
                 </div>
             </div>
-            <a href="http://localhost:8080/wecantrekit">Back to home</a>
+            <a href="http://localhost:1234">Back to home</a>
         </div>
     </div>
 </div>
-</body>
-</html>
+` ;
+}
