@@ -28,29 +28,6 @@ public class Populator implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-        Subject Science = new Subject("testing","Science");
-        subjectRepo.save(Science);
-
-
-        Planet Mercury = new Planet("Mercury","first");
-        Planet Venus = new Planet ("Venus","second");
-        Planet Earth = new Planet("Earth","third");
-        Planet Mars = new Planet("Mars","fourth");
-        Planet Jupiter = new Planet("Jupiter","fifth");
-        Planet Saturn = new Planet("Saturn ","sixth");
-        Planet Uranus = new Planet("Uranus","seventh");
-        Planet Neptune = new Planet( "Neptune","eighth");
-        Planet Pluto = new Planet ("Pluto","ninth");
-        planetRepo.save(Mercury);
-        planetRepo.save(Venus);
-        planetRepo.save(Earth);
-        planetRepo.save(Mars);
-        planetRepo.save(Jupiter);
-        planetRepo.save(Saturn);
-        planetRepo.save(Uranus);
-        planetRepo.save(Neptune);
-        planetRepo.save(Pluto);
-
         InterestingInfo planet1 = new InterestingInfo( "4.5 billion years","35.98 million mi","3,032 mi","3.285 × 10^23 kg");
         InterestingInfo planet2 = new InterestingInfo("4.53 billion years","67.24 million mi","7,520 mi","4.87 × 1024 kg");
         InterestingInfo planet3 = new InterestingInfo("4.54 billion years","91 million mi","7,917 mi","5.972 × 10^24 kg");
@@ -69,6 +46,31 @@ public class Populator implements CommandLineRunner {
         interestingRepo.save(planet7);
         interestingRepo.save(planet8);
         interestingRepo.save(planet9);
+
+        Subject Science = new Subject("testing","Science", planet1,planet2,planet3,planet4,planet5,planet6,planet7,planet8,planet9);
+        subjectRepo.save(Science);
+
+
+        Planet Mercury = new Planet("Mercury","first",planet1);
+        Planet Venus = new Planet ("Venus","second", planet2);
+        Planet Earth = new Planet("Earth","third", planet3);
+        Planet Mars = new Planet("Mars","fourth",planet4);
+        Planet Jupiter = new Planet("Jupiter","fifth",planet5);
+        Planet Saturn = new Planet("Saturn ","sixth",planet6);
+        Planet Uranus = new Planet("Uranus","seventh",planet7);
+        Planet Neptune = new Planet( "Neptune","eighth",planet8);
+        Planet Pluto = new Planet ("Pluto","ninth",planet9);
+        planetRepo.save(Mercury);
+        planetRepo.save(Venus);
+        planetRepo.save(Earth);
+        planetRepo.save(Mars);
+        planetRepo.save(Jupiter);
+        planetRepo.save(Saturn);
+        planetRepo.save(Uranus);
+        planetRepo.save(Neptune);
+        planetRepo.save(Pluto);
+
+
 
 
 
