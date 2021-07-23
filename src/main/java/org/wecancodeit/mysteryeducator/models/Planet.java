@@ -18,6 +18,7 @@ public class Planet {
     private Long id;
     private String name;
     private String location;
+    private String description;
     @OneToMany(mappedBy = "planet")
     @JsonIgnore
     private Collection<InterestingInfo>interestingInfos;
@@ -34,6 +35,10 @@ public class Planet {
         return location;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
     public Collection<InterestingInfo> getInterestingInfos() {
         return interestingInfos;
     }
@@ -42,9 +47,10 @@ public class Planet {
 
     }
 
-    public Planet( String name, String location,InterestingInfo...interestingInfos) {
+    public Planet( String name, String location, String description,InterestingInfo...interestingInfos) {
         this.name = name;
         this.location = location;
+        this.description = description;
         this.interestingInfos = new ArrayList<>(Arrays.asList(interestingInfos));
     }
 

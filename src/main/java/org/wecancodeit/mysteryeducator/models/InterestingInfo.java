@@ -1,7 +1,6 @@
 package org.wecancodeit.mysteryeducator.models;
 
 import javax.persistence.*;
-import java.util.Collection;
 import java.util.Objects;
 
 @Entity
@@ -47,11 +46,11 @@ public class InterestingInfo {
         return planet;
     }
 
-    public InterestingInfo(){
+    public InterestingInfo() {
 
     }
 
-    public InterestingInfo( String age, String distance, String size, String weight) {
+    public InterestingInfo(String age, String distance, String size, String weight) {
         this.age = age;
         this.distance = distance;
         this.size = size;
