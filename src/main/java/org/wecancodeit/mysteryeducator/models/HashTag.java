@@ -34,9 +34,9 @@ public class HashTag {
         return subjects;
     }
 
-    public HashTag( String name,Subject...subjects) {
+    public HashTag(String name, Subject... subjects) {
         this.name = name;
-       this.subjects = new ArrayList<Subject>(Arrays.asList(subjects));
+        this.subjects = new ArrayList<Subject>(Arrays.asList(subjects));
 
     }
 

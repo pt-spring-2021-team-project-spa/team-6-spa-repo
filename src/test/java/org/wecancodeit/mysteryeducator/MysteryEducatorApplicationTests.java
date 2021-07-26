@@ -13,7 +13,7 @@ class MysteryEducatorApplicationTests {
 	@Test
 	void contextLoads() {
 		InterestingInfo tempInfo = new InterestingInfo("17","10000","1000","100");
-		Planet tempPlanet = new Planet("mars","mars",tempInfo);
+		Planet tempPlanet = new Planet("mars","mars","mars",tempInfo);
 		Subject tempSubject = new Subject("astronomy","type",tempInfo);
 		HashTag tempHashTag = new HashTag("name",tempSubject);
 	}
