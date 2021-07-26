@@ -1,13 +1,13 @@
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './components/Home';
-import Tutors from './components/Tutors';
-import Science from './components/Science';
-import Art from './components/Art';
-import History from './components/History';
+import Planets from './components/Planets';
+import Met from './components/Met';
+import HashTags from './components/HashTags';
+import ContactUs from './components/ContactUs';
+import AboutUs from './components/AboutUs';
 import crud from './crud/crud';
-// import pages: history, science, art
-
+import Planet from './components/Planet';
 
 
 buildPage();
@@ -16,10 +16,16 @@ function buildPage() {
     header();
     footer();
     navHome();
-    navTutors();
-    navScience();
-    navHistory();
-    navArt();
+    navHashTags();
+    navPlanets();
+    navAboutUs();
+    navContactUs();
+    navMet()
+
+
+
+
+
 }
 
 function header() {
@@ -34,54 +40,79 @@ function footer() {
 
 function navHome() {
     const homeElem = document.querySelector(".nav-list__home");
-    homeElem.addEventListener("click", () => {
+    homeElem.addEventListener('click', () => {
         const app = document.querySelector("#app");
         app.innerHTML = Home();
     });
 }
 
-function navTutors() {
-    const tutorsElem = document.querySelector('.nav-list__tutors');
-    tutorsElem.addEventListener('click', () => {
-        const app = document.querySelector('#app');
-        // app.innerHTML = Tutors();
-        crud.getRequest('http://localhost:8080/api/tutors', Tutors => {
-            app.innerHTML = Tutors(tutors);
-        });
+function navAboutUs() {
+    const aboutUsElem = document.querySelector(".nav-list__aboutUs");
+    aboutUsElem.addEventListener('click', () => {
+        const app = document.querySelector("#app");
+        app.innerHTML = AboutUs();
     });
 }
 
-function navScience() {
-    const scienceElem = document.querySelector('.nav-list__science');
-    scienceElem.addEventListener('click', () => {
-        const app = document.querySelector('#app');
-        app.innerHTML = Science();
-        crud.getRequest('http://localhost:8080/api/science', Science => {
-            app.innerHTML = Science(science);
-        });
-
+function navContactUs() {
+    const contactUsElem = document.querySelector(".nav-list__contactUs");
+    contactUsElem.addEventListener('click', () => {
+        const app = document.querySelector("#app");
+        app.innerHTML = ContactUs();
     });
 }
 
-function navHistory() {
-    const historyElem = document.querySelector('.nav-list__history');
-    historyElem.addEventListener('click', () => {
-        const app = document.querySelector('#app');
-        crud.getRequest('http://localhost:8080/api/history', History => {
-            app.innerHTML = History(history);
-            // url is end point or Orpa's work  & History(history) fetch & using that info
-        });
 
+
+function navPlanets() {
+    const planetsElem = document.querySelector(".nav-list__planets");
+    planetsElem.addEventListener('click', () => {
+        const app = document.querySelector('#app');
+        crud.getRequest('http://localhost:8080/api/planets', planets => {
+            app.innerHTML = Planets(planets);
+        });
+        renderPlanetInfo();
     });
+
 }
 
-function navArt() {
-    const artElem = document.querySelector('.nav-list__art');
-    artElem.addEventListener('click', () => {
+function renderPlanetInfo() {
+    const app = document.querySelector('#app');
+    app.addEventListener('click', () => {
+        if (event.target.classList.contains('planets-list__name')) {
+            const planetId = event.target.querySelector('#planetId').value;
+            crude.getRequest(`http://localhost:8080/api/planets/${planetId}`, planet => {
+                app.innerHTML = Planets(planet);
+
+            });
+
+        }
+    });
+
+
+}
+
+function navHashTags() {
+    const hashTagsElem = document.querySelector(".nav-list__hashTags");
+    hashTagsElem.addEventListener('click', () => {
         const app = document.querySelector('#app');
-        // app.innerHTML = Art();
-        crud.getRequest('http://localhost:8080/api/art', Art => {
-            app.innerHTML = Art(art);
+        crud.getRequest('http://localhost:8080/api/hashTags', hashTags => {
+            app.innerHTML = HashTags(hashTags);
+        });
+    });
+
+
+
+}
+
+
+
+function navMet() {
+    const metElem = document.querySelector('.nav-list__met');
+    metElem.addEventListener('click', () => {
+        const app = document.querySelector('#app');
+        crud.getRequest('http://localhost:8080/api/art', met => {
+            app.innerHTML = Met(met);
         });
     });
 }

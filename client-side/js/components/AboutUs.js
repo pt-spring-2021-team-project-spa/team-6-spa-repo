@@ -1,5 +1,5 @@
-export  default  function AboutUs() {
-return ` <h1>About Us</h1>
+export default function AboutUs() {
+    return ` <h1>About Us</h1>
 <div class="about-section">
     <h1> Meet the creators</h1>
     <div class="row">
@@ -74,5 +74,5 @@ return ` <h1>About Us</h1>
         </div>
     </div>
 </div>
-` ;
+`;
 }

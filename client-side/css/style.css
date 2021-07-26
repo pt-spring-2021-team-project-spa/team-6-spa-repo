@@ -119,21 +119,31 @@ body {
 
 } */
 
-/* .hashTags-list {
+.hashTags-list {
     margin: 1rem;
 }
 
-.books-list__title {
+.add-hashtag__name,
+.add-hashtag__submit,
+.add-hashtag__planetSubmit {
+    margin: 2rem;
+    font-size: 20px;
+}
+
+/* .planets-list__name {
     margin: 1rem;
     font-size: 20px;
 }
 
-.books-list__title:hover {
+
+.planets-list__name:hover {
     background-color: #ddd;
     border-radius: 6px;
     transition: 0.5s;
     width: 50%;
-} */
+}  */
+
+
 @keyframes animatedBackground {
     from {
         background-position: 0 0;
