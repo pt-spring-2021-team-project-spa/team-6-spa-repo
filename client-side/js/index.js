@@ -8,6 +8,7 @@ import ContactUs from './components/ContactUs';
 import AboutUs from './components/AboutUs';
 import crud from './crud/crud';
 import Planet from './components/Planet';
+import PlanetsPage from './pages/PlanetsPage';
 
 
 buildPage();
@@ -69,34 +70,35 @@ function navPlanets() {
     planetsElem.addEventListener('click', () => {
         const app = document.querySelector('#app');
         crud.getRequest('http://localhost:8080/api/planets', planets => {
-            app.innerHTML = Planets(planets);
+            console.log(planets)
+            app.innerHTML = PlanetsPage(planets);
         });
-        renderPlanetInfo();
     });
 
 }
 
-function renderPlanetInfo() {
-    const app = document.querySelector('#app');
-    app.addEventListener('click', () => {
-        if (event.target.classList.contains('planets-list__name')) {
-            const planetId = event.target.querySelector('#planetId').value;
-            crude.getRequest(`http://localhost:8080/api/planets/${planetId}`, planet => {
-                app.innerHTML = Planets(planet);
+// function renderPlanetInfo() {
+//     const app = document.querySelector('#app');
+//     app.addEventListener('click', () => {
+//         if (event.target.classList.contains('planets-list__name')) {
+//             const planetId = event.target.querySelector('#planetId').value;
+//             crude.getRequest(`http://localhost:8080/api/planets/${planetId}`, planet => {
+//                 app.innerHTML = Planets(planet);
 
-            });
+//             });
 
-        }
-    });
+//         }
+//     });
 
 
-}
+// }
 
 function navHashTags() {
     const hashTagsElem = document.querySelector(".nav-list__hashTags");
     hashTagsElem.addEventListener('click', () => {
         const app = document.querySelector('#app');
         crud.getRequest('http://localhost:8080/api/hashTags', hashTags => {
+            console.log(hashTags);
             app.innerHTML = HashTags(hashTags);
         });
     });
