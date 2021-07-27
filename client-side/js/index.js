@@ -9,6 +9,11 @@ import AboutUs from './components/AboutUs';
 import crud from './crud/crud';
 import Planet from './components/Planet';
 import PlanetsPage from './pages/PlanetsPage';
+import Contact from './components/ContactUs';
+import Form from './components/Form';
+import fetchNasa from './components/nasa.js';
+// import pages: history, science, art
+
 
 
 buildPage();
@@ -19,13 +24,12 @@ function buildPage() {
     navHome();
     navHashTags();
     navPlanets();
-    navAboutUs();
+    about();
     navContactUs();
     navMet()
-
-
-
-
+    contact();
+    navNasa();
+    form();
 
 }
 
@@ -47,13 +51,40 @@ function navHome() {
     });
 }
 
-function navAboutUs() {
-    const aboutUsElem = document.querySelector(".nav-list__aboutUs");
-    aboutUsElem.addEventListener('click', () => {
+function contact() {
+    const homeElem = document.querySelector(".nav-list__contactUs");
+    homeElem.addEventListener("click", () => {
+        const app = document.querySelector("#app");
+        app.innerHTML = Contact();
+    });
+}
+
+function about() {
+    const aboutElem = document.querySelector(".nav-list__aboutUs");
+    aboutElem.addEventListener("click", () => {
         const app = document.querySelector("#app");
         app.innerHTML = AboutUs();
     });
 }
+
+function form() {
+    const homeElem = document.querySelector(".nav-list__form");
+    homeElem.addEventListener("click", () => {
+        const app = document.querySelector("#app");
+        app.innerHTML = Form();
+    });
+}
+
+// function navTutors() {
+//     const tutorsElem = document.querySelector('.nav-list__tutors');
+//     tutorsElem.addEventListener('click', () => {
+//         const app = document.querySelector('#app');
+//         // app.innerHTML = Tutors();
+//         crud.getRequest('http://localhost:8080/api/tutors', Tutors => {
+//             app.innerHTML = Tutors(tutors);
+//         });
+//     });
+// }
 
 function navContactUs() {
     const contactUsElem = document.querySelector(".nav-list__contactUs");
@@ -73,6 +104,14 @@ function navPlanets() {
             console.log(planets)
             app.innerHTML = PlanetsPage(planets);
         });
+    });
+
+}
+
+function navNasa() {
+    const nasaElem = document.querySelector(".nav-list__nasa");
+    nasaElem.addEventListener('click', () => {
+        fetchNasa()
     });
 
 }

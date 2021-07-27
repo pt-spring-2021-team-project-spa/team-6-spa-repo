@@ -1,5 +1,7 @@
 package org.wecancodeit.mysteryeducator.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.Objects;
 
@@ -15,6 +17,7 @@ public class InterestingInfo {
     @ManyToOne
     private Subject subject;
     @ManyToOne
+    @JsonIgnore
     private Planet planet;
 
 

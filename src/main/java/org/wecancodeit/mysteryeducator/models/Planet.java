@@ -20,7 +20,6 @@ public class Planet {
     private String location;
     private String description;
     @OneToMany(mappedBy = "planet")
-    @JsonIgnore
     private Collection<InterestingInfo>interestingInfos;
 
     public Long getId() {
