@@ -1,42 +1,7 @@
+
 export default function Contact() {
-    return `
-    <style>
- input[type=text], select, textarea {
-      width: 100%; 
-      padding: 12px; 
-      border: 1px solid #ccc; 
-      border-radius: 4px; 
-      box-sizing: border-box; 
-      margin-top: 6px; 
-      margin-bottom: 16px; 
-      
-    }
-    
-
-    input[type=submit] {
-      background-color: blue;
-      color: white;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    
-   
-    input[type=submit]:hover {
-      background-color: gray;
-    }
-    
-    
-    .container {
-      border-radius: 5px;
-      background-color: red;
-      padding: 20px;
-    }
-
-    </style> 
-   
-    
+  return `
+  <link rel="stylesheet" href="css/form.css">
     
     <h1> Talk To Us !! </h1> 
     <div class="container">
@@ -64,5 +29,5 @@ export default function Contact() {
   </div>
 </div>
 
-    `
+    `;
 }
