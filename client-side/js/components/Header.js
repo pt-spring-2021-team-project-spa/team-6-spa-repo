@@ -7,6 +7,7 @@ export default function Header() {
         <li class='nav-list__history'>🌎 HISTORY</li>
         <li class='nav-list__art'>🎭 ART</li>
         <li class='nav-list__about'>✨ ABOUT US</li>
+        <li class='nav-list__form'>✨ SCHEDULE A VISIT</li>
         <li class='nav-list__contact'>📱 CONTACT US</li>
         </ul>
     `;

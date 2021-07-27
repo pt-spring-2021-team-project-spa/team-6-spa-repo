@@ -6,6 +6,8 @@ import Science from './components/Science';
 import Art from './components/Art';
 import History from './components/History';
 import crud from './crud/crud';
+import Contact from './components/ContactUs';
+import Form from './components/Form';
 // import pages: history, science, art
 
 
@@ -20,6 +22,8 @@ function buildPage() {
     navScience();
     navHistory();
     navArt();
+    contact();
+    form();
 }
 
 function header() {
@@ -37,6 +41,22 @@ function navHome() {
     homeElem.addEventListener("click", () => {
         const app = document.querySelector("#app");
         app.innerHTML = Home();
+    });
+}
+
+function contact() {
+    const homeElem = document.querySelector(".nav-list__contact");
+    homeElem.addEventListener("click", () => {
+        const app = document.querySelector("#app");
+        app.innerHTML = Contact();
+    });
+}
+
+function form () {
+    const homeElem = document.querySelector(".nav-list__form");
+    homeElem.addEventListener("click", () => {
+        const app = document.querySelector("#app");
+        app.innerHTML = Form();
     });
 }
 
