@@ -1,6 +1,6 @@
 import astronautImg from '../../images/astronaut.jpg';
-export default function Planets(planets) {
-    return `
+export default function Planets() {
+  return `
     <h1>What You'll Learn is Out of This World!</h1>
     <ul>
     ${planets.results
