@@ -1,4 +1,3 @@
-
 export default function Contact() {
   return `
   <link rel="stylesheet" href="css/form.css">
