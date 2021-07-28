@@ -13,6 +13,7 @@ export default function Planet(planet) {
         <li>
         <span>${planet.name}</span>
         </li>
+       
            `;
 
     }).join('')}

@@ -9,10 +9,12 @@ import AboutUs from './components/AboutUs';
 import crud from './crud/crud';
 import Planet from './components/Planet';
 import PlanetsPage from './pages/PlanetsPage';
+import HashTagsPage from './pages/HashTagsPage';
 import Contact from './components/ContactUs';
 import Form from './components/Form';
 import fetchNasa from './components/nasa.js';
-// import pages: history, science, art
+import InterestingInfoPage from './pages/InterestingInfoPage';
+
 
 
 
@@ -30,6 +32,10 @@ function buildPage() {
     contact();
     navNasa();
     form();
+    planet(),
+        interestingInfo();
+
+
 
 }
 
@@ -133,12 +139,12 @@ function navNasa() {
 // }
 
 function navHashTags() {
-    const hashTagsElem = document.querySelector(".nav-list__hashTags");
+    const hashTagsElem = document.querySelector(".nav-list__hashtags");
     hashTagsElem.addEventListener('click', () => {
         const app = document.querySelector('#app');
-        crud.getRequest('http://localhost:8080/api/hashTags', hashTags => {
+        crud.getRequest('http://localhost:8080/api/hashtags', hashTags => {
             console.log(hashTags);
-            app.innerHTML = HashTags(hashTags);
+            app.innerHTML = HashTagsPage(hashTags);
         });
     });
 
@@ -152,7 +158,7 @@ function navMet() {
     const metElem = document.querySelector('.nav-list__met');
     metElem.addEventListener('click', () => {
         const app = document.querySelector('#app');
-        crud.getRequest('http://localhost:8080/api/art', met => {
+        crud.getRequest('https://www.metmuseum.org/art/collection/search#!?searchField=All&sortBy=Relevance&q=Art%20Deco&offset=0&perPage=20', met => {
             app.innerHTML = Met(met);
         });
     });

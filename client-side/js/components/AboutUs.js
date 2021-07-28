@@ -56,7 +56,7 @@ export default function AboutUs() {
                 <div class="container">
                     <h2> Meet Rochelle Dishmon </h2>
                     <a href="https://www.linkedin.com/in/rochelle-dishmon/">
-                    <p class="title">Back End Coder</p>
+                    <p class="title">Front End Coder</p>
                     <p>Conscious Coder" For the love of travel & spurred by Jackr's high Social Responsibility standands, Rochelle joined our team as a backend java coder. in addition to volunteering she is an avid kayaker and hiker.</p>
                     <p>@example.com</p>
                     <p>
@@ -72,10 +72,10 @@ export default function AboutUs() {
         <div class="column">
             <div class="card">
                 <div class="container">
-                    <h2> Aminatou Jallow </h2>
-                    <a href="https://www.linkedin.com/in/rochelle-dishmon/">
+                    <h2> Meet Aminatou Jallow </h2>
+                    <a href="https://www.linkedin.com/in/aminatou-jallow/">
                     <p class="title">Back End Coder</p>
-                    <p>Great Coder" For the love of history & science by Jackr's high Social Responsibility standands, Aminatou has recently joined our team as a backend java coder.</p>
+                    <p>Great Coder" Dynamic and creative software developer , with strong skills in programming and passionate about problem solving. Aminatou has recently joined our team as a backend java coder.</p>
                     <p>@example.com</p>
                     <p>
                         <button class="button">Contact</button>

@@ -1,16 +1,13 @@
-import globeImg from '../../images/globehead.jpg';
-
-export default function InterestingInfo(interestingInfo) {
+export default function InterestingInfo(interestingInfos) {
 
     return `
     <ul class="interestingInfo-list">
-    ${interestingInfo.results
-        .map((interestingInfo) => {
+    ${interestingInfos.map((interestingInfoTag) => {
         return`
-        <li class="interestingInfo-list__id">${interestingInfoTag.age}</li>
-        <li class="interestingInfo-list__id">${interestingInfoTag.distance}</li>
-        <li class="interestingInfo-list__id">${interestingInfoTag.size}</li>
-        <li class="interestingInfo-list__id">${interestingInfoTag.weight}</li>
+        <li class="interestingInfo-list__age">${interestingInfoTag.age}</li>
+        <li class="interestingInfo-list__distance">${interestingInfoTag.distance}</li>
+        <li class="interestingInfo-list__size">${interestingInfoTag.size}</li>
+        <li class="interestingInfo-list__weight">${interestingInfoTag.weight}</li>
                
         `;
     })
