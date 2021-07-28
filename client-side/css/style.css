@@ -106,7 +106,7 @@ h4 {
 
 }
 
-body {
+.container {
     background-color: cyan;
 }
 
@@ -119,7 +119,7 @@ body {
 
 } */
 
-.hashTags-list {
+/* .hashTags-list {
     margin: 1rem;
 }
 
@@ -128,20 +128,28 @@ body {
 .add-hashtag__planetSubmit {
     margin: 2rem;
     font-size: 20px;
+} */
+
+#nasaImage {
+    box-shadow: 10px 5px 5px 5px magenta;
+
 }
 
-/* .planets-list__name {
+
+
+.planets-list {
     margin: 1rem;
     font-size: 20px;
+    color: black;
+    border-radius: 6px;
+    width: 50%;
+    padding: 10px;
+    align-items: left;
+    text-align: left;
+
 }
 
 
-.planets-list__name:hover {
-    background-color: #ddd;
-    border-radius: 6px;
-    transition: 0.5s;
-    width: 50%;
-}  */
 
 
 @keyframes animatedBackground {

@@ -1,4 +1,3 @@
-import globeImg from '../../images/globehead.jpg';
 import HashTags from '../components/HashTags.js';
 
 export default function HashTagsPage(hashTags) {

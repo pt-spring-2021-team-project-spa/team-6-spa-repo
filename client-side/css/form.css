@@ -1,12 +1,14 @@
-input[type=text], select, textarea {
-  width: 100%; 
-  padding: 12px; 
-  border: 1px solid #ccc; 
-  border-radius: 4px; 
-  box-sizing: border-box; 
-  margin-top: 6px; 
-  margin-bottom: 16px; 
-  
+input[type=text],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+
 }
 
 
@@ -19,7 +21,7 @@ input[type=submit] {
   cursor: pointer;
 }
 
-button{
+button {
   background-color: blue;
   background-color: blue;
   color: white;
@@ -36,6 +38,6 @@ input[type=submit]:hover {
 
 .container {
   border-radius: 5px;
-  background-color: red;
+  background-color: cyan;
   padding: 20px;
 }

@@ -51,8 +51,8 @@ export default function fetchNasa() {
 
                 const pic = document.createElement('img')
                 pic.src = showData.url;
-
-                pic.style.width = "1000px";
+                pic.id = "nasaImage";
+                pic.style.width = "300px";
                 app.appendChild(title);
                 app.appendChild(nameElem);
                 app.appendChild(pic);
